@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.view.ViewGroup" />
+
+        <variable
+            name="presenter"
+            type="com.fikrabd.mehna_w_amal.steppers.StepperPresenter" />
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/loading"
+            android:visibility="@{presenter.loading ? View.VISIBLE : View.INVISIBLE}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="false"
+            android:orientation="vertical"
+            android:visibility="@{presenter.loading ? ViewGroup.INVISIBLE : ViewGroup.VISIBLE}">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_marginStart="@dimen/space_30"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="@dimen/space_30"
+                    android:layout_height="@dimen/space_30"
+                    android:background="@drawable/ic_language"
+                    android:backgroundTint="@color/baseColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:textColor="@color/thirdBaseColor"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:id="@+id/layoutDots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:background="@android:color/white"
+                android:gravity="center|top"
+                android:orientation="horizontal" />
+
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_login"
+                android:text="@string/next"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/grey_90"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

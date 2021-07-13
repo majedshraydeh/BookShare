@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.view.ViewGroup" />
+
+        <variable
+            name="presenter"
+            type="com.fikrabd.mehna_w_amal.home.MainPresenter" />
+
+        <variable
+            name="user"
+            type="com.fikrabd.mehna_w_amal.models.User" />
+
+        <variable
+            name="fragment"
+            type="com.fikrabd.mehna_w_amal.home.fragment.CompanyProfileFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/rate_color" />
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:orientation="horizontal">
+
+
+                        <com.github.angads25.toggle.widget.LabeledSwitch
+                            android:id="@+id/online"
+                            android:layout_width="@dimen/space_60"
+                            android:layout_height="@dimen/space_30"
+                            android:layout_gravity="start|center"
+                            android:layout_marginStart="@dimen/space_10"
+                            android:gravity="center"
+                            android:padding="@dimen/space_20"
+                            app:colorBorder="@color/thirdBaseColor"
+                            app:colorOn="@color/thirdBaseColor"
+                            app:on="false"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_5"
+                            android:fontFamily="@font/kufi_bold"
+                            android:padding="2dp"
+                            android:text="@string/available"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/user_image_edit"
+                        imageLoading="@{user.image}"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+                        android:tag="@string/not_selected"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/grey_5"
+                        app:civ_border_width="1dp" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="bottom|end"
+                            android:onClick="@{(view) -> fragment.selectImage()}"
+                            android:src="@drawable/ic_add" />
+                    </FrameLayout>
+
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_20"
+                android:fontFamily="@font/kufi_bold"
+                android:text="@{user.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/space_20" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="?android:attr/ratingBarStyleSmall"
+                bind:setRating="@{String.valueOf(user.rating.average)}"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_5"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="@color/rate_color"
+                android:stepSize="0.1"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_20">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/commercial_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_5"
+                    app:errorEnabled="true"
+                    app:startIconDrawable="@drawable/ic_edit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/commercial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kufi_regular"
+                        android:hint="@string/commercial_registration_no"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:text="@{user.commercialActivitiesNo}"
+                        android:textSize="@dimen/space_15" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/commercial_activities_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_5"
+                    app:errorEnabled="true"
+                    app:startIconDrawable="@drawable/ic_edit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/commercial_activities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kufi_regular"
+                        android:hint="@string/commercial_activities"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:text="@{user.commercialActivities}"
+                        android:textSize="@dimen/space_15" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_5"
+                    app:errorEnabled="true"
+                    app:startIconDrawable="@drawable/ic_edit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kufi_regular"
+                        android:hint="@string/e_mail"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:text="@{user.email}"
+                        android:textSize="@dimen/space_15" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/website_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_5"
+                    app:errorEnabled="true"
+                    app:startIconDrawable="@drawable/ic_edit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/website"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kufi_regular"
+                        android:hint="@string/websites"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:text="@{user.website}"
+                        android:textSize="@dimen/space_15" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phone_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_5"
+                    app:errorEnabled="true"
+                    app:startIconDrawable="@drawable/ic_edit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kufi_regular"
+                        android:hint="@string/phone_number"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:text="@{user.phone}"
+                        android:textSize="@dimen/space_15" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/staric_phone_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_5"
+                    app:errorEnabled="true"
+                    app:startIconDrawable="@drawable/ic_edit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/static_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kufi_regular"
+                        android:hint="@string/fixed_phone"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:text="@{user.static_phone}"
+                        android:textSize="@dimen/space_15" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/city_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_5"
+                    app:errorEnabled="true"
+                    app:startIconDrawable="@drawable/ic_edit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kufi_regular"
+                        android:hint="@string/city"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:text="@{user.district}"
+                        android:textSize="@dimen/space_15" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/user"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_15"
+                android:background="@drawable/btn_login"
+                android:backgroundTint="@color/baseColor"
+                android:fontFamily="@font/kufi_bold"
+                android:onClick="@{(view) -> fragment.saveChange()}"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</layout>

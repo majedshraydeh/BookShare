@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.fikrabd.mehna_w_amal.models.User" />
+
+        <variable
+            name="presenter"
+            type="com.fikrabd.mehna_w_amal.home.MainPresenter" />
+
+    </data>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/background_container"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/baseColor"
+        android:orientation="vertical">
+
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="@dimen/space_100"
+            android:layout_height="@dimen/space_100"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/space_10"
+            android:layout_marginBottom="@dimen/space_10">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            imageLoading="@{user.image}"
+            loading="loading"
+            android:layout_width="@dimen/space_100"
+            android:layout_height="@dimen/space_100"
+            app:civ_border_color="@color/WhiteSmoke"
+            app:civ_border_width="1dp" />
+
+        <FrameLayout
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <include
+                android:id="@+id/load_image"
+                layout="@layout/loading_white" />
+
+        </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_10"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/space_5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="@dimen/space_20"
+                    android:fontFamily="@font/kufi_bold"
+                    android:gravity="start"
+                    android:text="@{user.name}"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="@dimen/space_20"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:fontFamily="@font/kufi_regular"
+                    android:gravity="start"
+                    android:text="@{user.email}"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</layout>

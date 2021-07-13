@@ -1,0 +1,65 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            app:itemTextAppearance="@style/StyleMenuItem"
+            android:title="@string/home" />
+
+    </group>
+
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_profile"
+        app:itemTextAppearance="@style/StyleMenuItem"
+        android:title="@string/profile" />
+
+
+    <item
+        android:id="@+id/general_settings_drawer"
+        android:title="@string/settings"
+        app:itemTextAppearance="@style/StyleMenuItem">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/change_password"
+                    android:icon="@drawable/ic_lock"
+                    app:itemTextAppearance="@style/StyleMenuItem"
+                    android:title="@string/change_password" />
+
+                <item
+                    android:id="@+id/change_language"
+                    android:icon="@drawable/ic_language"
+                    app:itemTextAppearance="@style/StyleMenuItem"
+                    android:title="@string/change_language" />
+
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/ic_logout"
+                    app:itemTextAppearance="@style/StyleMenuItem"
+                    android:title="@string/logout" />
+
+
+            </group>
+        </menu>
+    </item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</menu>

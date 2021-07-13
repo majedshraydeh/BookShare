@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.view.ViewGroup" />
+
+        <variable
+            name="presenter"
+            type="com.fikrabd.mehna_w_amal.register.fragments.individuals.IndividualsPresenter" />
+
+        <variable
+            name="fragment"
+            type="com.fikrabd.mehna_w_amal.register.fragments.individuals.IndividualFragment" />
+
+
+    </data>
+<LinearLayout
+    android:id="@+id/second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_30"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:fontFamily="@font/kufi_bold"
+                    android:padding="@dimen/space_5"
+                    android:text="@string/place_of_residence"
+                    android:textColor="@color/grey_60"
+                    android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:orientation="vertical"
+                        tools:context=".login.LoginActivity">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/country_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_5"
+                            android:layout_marginEnd="@dimen/space_5"
+                            android:visibility="visible"
+                            app:errorEnabled="true"
+                            app:startIconDrawable="@drawable/country">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/country"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:fontFamily="@font/kufi_regular"
+                                android:hint="@string/country"
+                                android:inputType="none"
+                                android:lines="1"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/space_15" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/state_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_5"
+                            android:layout_marginEnd="@dimen/space_5"
+                            android:layout_marginTop="@dimen/space_5"
+                            android:visibility="visible"
+                            app:errorEnabled="true"
+                            app:startIconDrawable="@drawable/goverment">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:fontFamily="@font/kufi_regular"
+                                android:hint="@string/governorate"
+                                android:inputType="none"
+                                android:lines="1"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/space_15" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/city_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_5"
+                            android:layout_marginEnd="@dimen/space_5"
+                            android:layout_marginTop="@dimen/space_5"
+                            android:visibility="visible"
+                            app:errorEnabled="true"
+                            app:startIconDrawable="@drawable/city">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/city"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/kufi_regular"
+                                android:hint="@string/city"
+                                android:inputType="text"
+                                android:lines="1"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/space_15" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_5"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/salary"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:layout_marginStart="@dimen/space_5"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/optional"
+                                android:textSize="14sp"
+                                android:layout_marginStart="@dimen/space_5"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/space_10"
+                            android:orientation="horizontal">
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:orientation="vertical">
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="@string/clock"
+                                 android:textSize="14sp"
+                                 android:layout_marginStart="@dimen/space_5"
+                                android:textColor="@color/black"/>
+
+                             <EditText
+                                 android:id="@+id/clock"
+                                 android:layout_width="@dimen/space_100"
+                                 android:layout_height="@dimen/space_30"
+                                 android:textAlignment="center"
+                                 android:inputType="number"
+                                 android:background="@color/grey_10"/>
+
+                         </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                              android:layout_marginStart="@dimen/space_10"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/day"
+                                    android:textSize="14sp"
+                                    android:layout_marginStart="@dimen/space_5"
+                                    android:textColor="@color/black" />
+
+                                <EditText
+                                    android:id="@+id/day"
+                                    android:layout_width="@dimen/space_100"
+                                    android:layout_height="@dimen/space_30"
+                                    android:textAlignment="center"
+                                    android:inputType="number"
+                                    android:background="@color/grey_10"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_10"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/month"
+                                    android:textSize="14sp"
+                                    android:layout_marginStart="@dimen/space_5"
+                                    android:textColor="@color/black" />
+
+                                <EditText
+                                    android:id="@+id/mounth"
+                                    android:layout_width="@dimen/space_100"
+                                    android:layout_height="@dimen/space_30"
+                                    android:textAlignment="center"
+                                    android:inputType="number"
+                                    android:background="@color/grey_10"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desire_to_work"
+                            android:layout_marginTop="@dimen/space_20"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                          android:layout_marginStart="@dimen/space_5"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_10"
+                            android:layout_marginStart="@dimen/space_5"
+                            android:layout_marginEnd="@dimen/space_5"
+                            android:orientation="horizontal">
+
+
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioGroupDesire_to_work"
+                                android:orientation="horizontal"
+                                >
+
+                                <RadioButton
+                                    android:id="@+id/radio_local"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/local"
+                                    android:layout_marginStart="@dimen/space_10"
+                                    android:layout_gravity="center"
+                                    android:checked="false"
+                                    android:textSize="@dimen/space_15"
+                                    android:buttonTint="@color/thirdBaseColor"
+                                    android:backgroundTint="@color/blue_grey_900"
+                                    tools:targetApi="lollipop"
+
+                                    />
+
+                                <RadioButton
+                                    android:id="@+id/radio_inside"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/inside_the_city"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:checked="false"
+                                    android:textSize="@dimen/space_15"
+                                    android:buttonTint="@color/thirdBaseColor"
+                                    tools:targetApi="lollipop" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_international"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/international"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:checked="false"
+                                    android:textSize="@dimen/space_15"
+                                    android:buttonTint="@color/thirdBaseColor"
+                                    tools:targetApi="lollipop" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</LinearLayout>
+</layout>

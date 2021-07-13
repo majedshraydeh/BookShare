@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مهنة و عمل</string>
+
+
+    <string name="facebook_app_id">773585460253860</string>
+    <string name="fb_login_protocol_scheme">fb773585460253860</string>
+
+
+    <string name="next" >التالي</string>
+    <string name="error_splash_screen">اسف!</string>
+    <string name="our_expertise_is_in_your_hands">خبرتنا بين يديك</string>
+    <string name="sign_up">تسجيل</string>
+    <string name="are_you">هل انت؟</string>
+    <string name="artistic">فني</string>
+    <string name="user">مستخدم</string>
+    <string name="skip">تخطي</string>
+    <string name="individual">فرد</string>
+    <string name="company">شركة</string>
+    <string name="register_your_details">سجل بياناتك</string>
+    <string name="authenticating">Authenticating</string>
+    <string name="name">الاسم</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="age_minimum_15_years">العمر(الحد الادنى ١٥ سنة)</string>
+    <string name="e_mail">البريد الإلكتروني</string>
+    <string name="governorate">المحافظة</string>
+    <string name="city">المدينة</string>
+    <string name="or_register_with">او سجل عن طريق</string>
+    <string name="no_internet_connection">لايوجد اتصال بل انترنت</string>
+    <string name="something_wrong">خطا</string>
+    <string name="enter_valid_emails">ادخل بريد الاكتروني صحيح</string>
+    <string name="valid_name">الاسم  يجب ان يحتوي ٥ احرف على الاقل</string>
+    <string name="valid_phone">ادخل رقم هاتف صحيح</string>
+    <string name="sign_in_with_facebook">تسجيل الدخول باستخدام الفيسبوك</string>
+    <string name="sign_in_with_google">تسجيل الدخول باستخدام جوجل</string>
+    <string name="select_your_profession">حدد مهنتك</string>
+    <string name="registration_of_individuals">تسجيل افراد</string>
+    <string name="female">انثى</string>
+    <string name="male">ذكر</string>
+    <string name="gender">الجنس</string>
+    <string name="experience">الخبرة</string>
+    <string name="occupation">المهنة</string>
+    <string name="permanence_type">نوع الدوام</string>
+    <string name="full_time">دوام كامل</string>
+    <string name="part_time">دوام جزئي</string>
+    <string name="do_you_have_a_professional_license">هل لديك رخصة مهنية</string>
+    <string name="reload_page">إعادة تحميل الصفحة</string>
+    <string name="place_of_residence">مكان الاقامة</string>
+    <string name="desire_to_work">رغبة العمل</string>
+    <string name="local">محلي</string>
+    <string name="inside_the_city">داخل المدينة</string>
+    <string name="international">دولي</string>
+    <string name="salary">الراتب</string>
+    <string name="optional">(اختياري)</string>
+    <string name="clock">الساعة</string>
+    <string name="day">اليوم</string>
+    <string name="month">الشهر</string>
+    <string name="resume">السيرة الذاتية</string>
+    <string name="upload_your_cv_optional">حمل سيرتك الذاتية(اختياري)</string>
+    <string name="hold_a_profession_license_if_any">حمل رخصة المهنة (أن وجدت)</string>
+    <string name="agree_to_the_terms_and_conditions">الموافقة على الشروط والاحكام</string>
+    <string name="current_location">الموقع الحالي</string>
+    <string name="required_location">الإذن مطلوب لإظهار الموقع</string>
+    <string name="company_registration">تسجيل شركات</string>
+    <string name="company_name">اسم الشركة</string>
+    <string name="commercial_registration_no">رقم السجل التجاري</string>
+    <string name="commercial_activities">النشاط التجاري</string>
+    <string name="cell_phone">الجوال</string>
+    <string name="fixed_phone">ثابت</string>
+    <string name="website">الموقع الالكتروني(اختياري)</string>
+    <string name="logo_optional">الشعار(اختياري)</string>
+    <string name="sectors">القطاعات</string>
+    <string name="available_sectors">القطاعات المتوفرة</string>
+    <string name="category_selection">اختر التصنيف</string>
+    <string name="select_your_location">حدد موقعك</string>
+    <string name="give_your_rating">اعطي تقييمك</string>
+    <string name="orders">orders</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="available">متاح</string>
+    <string name="websites">الموقع الالكتروني</string>
+    <string name="previous_contracts">العقود السابقة</string>
+    <string name="current_contracts">العقود الحاليا</string>
+    <string name="required_service">الخدمة المطلوبة</string>
+    <string name="cancel">الغاء</string>
+    <string name="save">حفظ</string>
+    <string name="edit_commercial_no">تعديل رقم السجل التجاري</string>
+    <string name="edit_commercial_activities">تعديل النشاط التجاري</string>
+    <string name="edit_email">تعديل البريد الالكتروني</string>
+    <string name="edit_phone">تعديل رقم الهاتف</string>
+    <string name="edit_city">تعديل المدينة</string>
+    <string name="sign_up_users">تسجيل المستخدمين</string>
+    <string name="country">الدولة</string>
+    <string name="select_country">اختر الدولة</string>
+    <string name="select_city">اختر المدينة</string>
+    <string name="select_governorate">اختر المحافظة</string>
+    <string name="password">الرقم السري</string>
+    <string name="valid_pass">ادخل رقم سري صحيح</string>
+    <string name="valid_commercial_no">ادخل رقم سجل تجاري صحيح</string>
+    <string name="not_empty">هذا الحقل يجب ان لا يكون فارغ</string>
+    <string name="select_picture">Select Picture</string>
+    <string name="not_selected">not_selected</string>
+    <string name="selected">selected</string>
+    <string name="you_must_agree_terms_and_conditions">يجب أن توافق على الشروط والأحكام.</string>
+    <string name="change_language">تغير اللغة</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="navigation_drawer_open">NavigationDrawerOpen</string>
+    <string name="navigation_drawer_close">NavigationDrawerClose</string>
+    <string name="categories_list">قائمة التصنيفات</string>
+    <string name="choose_one_or_more_categories">اختر تصنيف او اكثر</string>
+    <string name="total_amount">المبلغ الاجمالي</string>
+    <string name="valid_info">ادخل معلوماتك بشكل صحيح</string>
+    <string name="choose_at_least_one_category">اختر فئة واحدة على الاقل</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="sign_in"> تسجيل الدخول</string>
+    <string name="sign_in_to_continue">قم بتسجيل الدخول للمتابعة</string>
+    <string name="change_password">تغير كلمة المرور</string>
+    <string name="reset_password">إعادة تعيين كلمة المرور</string>
+    <string name="current_password">كلمة المرور الحالي</string>
+    <string name="new_password">ادخل كلمة مرور جديدة</string>
+    <string name="settings">الاعدادات</string>
+    <string name="nationality">الجنسية</string>
+    <string name="select_nationality">اختر الجنسية</string>
+    <string name="complete_the_payment_process_to_activate_the_account">اكمل عملية الدفع لتنشيط الحساب</string>
+    <string name="rating">تقيم</string>
+    <string name="info_updated"> تحديث المعلومات</string>
+    <string name="jop">المهنة</string>
+
+
+    <string-array name="languages">
+        <item>الإنجليزية</item>
+        <item>عربي</item>
+    </string-array>
+
+
+</resources>

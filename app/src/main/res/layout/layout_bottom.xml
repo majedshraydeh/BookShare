@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.view.ViewGroup" />
+
+        <variable
+            name="presenter"
+            type="com.fikrabd.mehna_w_amal.register.RegisterPresenter" />
+
+    </data>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/grey_5"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_medium">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:fontFamily="@font/kufi_bold"
+                android:padding="@dimen/space_5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/loading"
+                layout="@layout/loading"
+                android:visibility="@{presenter.loading ? View.VISIBLE : View.GONE}" />
+
+            <com.mlsdev.animatedrv.AnimatedRecyclerView
+                android:id="@+id/recyclerview_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/space_5"
+                android:orientation="vertical"
+                android:requiresFadingEdge="vertical"
+                app:animationDuration="600"
+                app:layoutAnimation="@anim/layout_animation_from_bottom_scale"
+                app:layoutManagerOrientation="vertical"
+                app:layoutManagerReverse="false"
+                app:layoutManagerType="linear" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</layout>
