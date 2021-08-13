@@ -12,7 +12,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.app.bookshares"
+        applicationId "com.app.bookshare"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

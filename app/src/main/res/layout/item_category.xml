@@ -6,11 +6,11 @@
 
         <variable
             name="category"
-            type="com.app.bookshares.models.Category" />
+            type="com.app.bookshare.models.Category" />
 
         <variable
             name="presenter"
-            type="com.app.bookshares.home.MainPresenter" />
+            type="com.app.bookshare.home.MainPresenter" />
 
         <variable
             name="loading"

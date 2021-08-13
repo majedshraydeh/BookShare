@@ -9,11 +9,11 @@
 
         <variable
             name="item"
-            type="com.app.bookshares.models.Material" />
+            type="com.app.bookshare.models.Material" />
 
         <variable
             name="presenter"
-            type="com.app.bookshares.home.MainPresenter" />
+            type="com.app.bookshare.home.MainPresenter" />
 
     </data>
 

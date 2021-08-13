@@ -9,11 +9,11 @@
         <import type="android.view.ViewGroup" />
         <variable
             name="presenter"
-            type="com.app.bookshares.home.MainPresenter" />
+            type="com.app.bookshare.home.MainPresenter" />
 
         <variable
             name="fragment"
-            type="com.app.bookshares.home.fragments.CategoryFragment" />
+            type="com.app.bookshare.home.fragments.CategoryFragment" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

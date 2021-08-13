@@ -7,11 +7,11 @@
 
         <variable
             name="presenter"
-            type="com.app.bookshares.login.LoginPresenter" />
+            type="com.app.bookshare.login.LoginPresenter" />
 
         <variable
             name="activity"
-            type="com.app.bookshares.login.LoginActivity" />
+            type="com.app.bookshare.login.LoginActivity" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

@@ -6,7 +6,7 @@
 
         <variable
             name="user"
-            type="com.app.bookshares.models.User" />
+            type="com.app.bookshare.models.User" />
 
 
         <variable
@@ -15,7 +15,7 @@
 
         <variable
             name="presenter"
-            type="com.app.bookshares.home.MainPresenter" />
+            type="com.app.bookshare.home.MainPresenter" />
 
     </data>
 

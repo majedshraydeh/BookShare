@@ -10,11 +10,11 @@
         <import type="android.view.ViewGroup" />
         <variable
             name="presenter"
-            type="com.app.bookshares.home.MainPresenter" />
+            type="com.app.bookshare.home.MainPresenter" />
 
         <variable
             name="fragment"
-            type="com.app.bookshares.home.fragments.MaterialListFragment" />
+            type="com.app.bookshare.home.fragments.MaterialListFragment" />
     </data>
 
     <LinearLayout

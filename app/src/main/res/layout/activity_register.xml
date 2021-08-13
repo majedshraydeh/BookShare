@@ -7,11 +7,11 @@
 
         <variable
             name="presenter"
-            type="com.app.bookshares.register.RegisterPresenter" />
+            type="com.app.bookshare.register.RegisterPresenter" />
 
         <variable
             name="activity"
-            type="com.app.bookshares.register.RegisterActivity" />
+            type="com.app.bookshare.register.RegisterActivity" />
     </data>
 
 

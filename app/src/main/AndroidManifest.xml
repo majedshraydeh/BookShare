@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.app.bookshares">
+    package="com.app.bookshare">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
-        android:name="com.app.bookshares.app.App"
+        android:name="com.app.bookshare.app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         tools:replace="android:icon"
@@ -26,12 +26,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="q"
         android:fullBackupContent="true">
-        <activity android:name="com.app.bookshares.register.RegisterActivity" />
-        <activity android:name="com.app.bookshares.home.MainActivity" />
-        <activity android:name="com.app.bookshares.login.LoginActivity" >
+        <activity android:name="com.app.bookshare.register.RegisterActivity" />
+        <activity android:name="com.app.bookshare.home.MainActivity" />
+        <activity android:name="com.app.bookshare.login.LoginActivity" >
 
         </activity>
-        <activity android:name="com.app.bookshares.splash.SplashActivity">
+        <activity android:name="com.app.bookshare.splash.SplashActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

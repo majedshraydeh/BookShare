@@ -8,11 +8,11 @@
 
         <variable
             name="subCategory"
-            type="com.app.bookshares.models.SubCategory" />
+            type="com.app.bookshare.models.SubCategory" />
 
         <variable
             name="presenter"
-            type="com.app.bookshares.home.MainPresenter" />
+            type="com.app.bookshare.home.MainPresenter" />
 
     </data>
 
