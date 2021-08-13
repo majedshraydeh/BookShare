@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="baseColor">#1A7B9D</color>
+    <color name="baseColor">#FF9D0C</color>
     <color name="secondBaseColor">#E7F3F8</color>
     <color name="thirdBaseColor">#F4CF3E</color>
 
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
 
     <color name="colorPrimary">#6200EE</color>

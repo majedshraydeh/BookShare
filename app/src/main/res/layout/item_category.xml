@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
             name="category"
-            type="com.fikrabd.mehna_w_amal.models.Category" />
+            type="com.app.bookshares.models.Category" />
 
         <variable
             name="presenter"
-            type="com.fikrabd.mehna_w_amal.home.MainPresenter" />
+            type="com.app.bookshares.home.MainPresenter" />
 
         <variable
             name="loading"
             type="android.widget.FrameLayout" />
 
-        <variable
-            name="position"
-            type="java.lang.Integer" />
-
-        <variable
-            name="selectedPosition"
-            type="java.lang.Integer" />
 
     </data>
 
@@ -32,9 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
-        card_view:cardCornerRadius="@dimen/space_5"
+        card_view:cardCornerRadius="7dp"
         android:foreground="?android:attr/selectableItemBackground"
-        card_view:cardBackgroundColor="@color/baseColor"
+        card_view:cardBackgroundColor="@color/white"
         card_view:cardElevation="2dp"
         card_view:cardUseCompatPadding="true">
 
@@ -48,13 +40,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    imageLoading="@{category.image}"
-                    loading="@{loading}"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginTop="@dimen/space_5"
                     android:layout_gravity="center"
-                    android:scaleType="centerInside" />
+                    imageLoading="@{category.image}"
+                    loading="@{loading}"
+                    android:scaleType="centerInside"
+                    card_view:tint="@color/baseColor" />
 
                 <FrameLayout
                     android:id="@+id/loading"
@@ -64,24 +57,22 @@
 
                     <include
                         android:id="@+id/load_image"
-                        layout="@layout/loading_white" />
+                        layout="@layout/loading" />
 
                 </FrameLayout>
+
             </FrameLayout>
 
             <TextView
-                bind:position="@{position}"
-                bind:selectedPosition="@{selectedPosition}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
                 android:fontFamily="@font/kufi_bold"
                 android:gravity="center"
-                android:lines="1"
-                android:maxLines="1"
-                android:text="@{category.title}"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:lines="2"
+                android:maxLines="2"
+                android:text="@{category.name}"
+                android:textColor="@color/baseColor"
+                android:textSize="16sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

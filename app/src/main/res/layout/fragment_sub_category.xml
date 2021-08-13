@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <import type="android.view.View" />
+
+        <import type="android.view.ViewGroup" />
+        <variable
+            name="presenter"
+            type="com.app.bookshares.home.MainPresenter" />
+
+        <variable
+            name="fragment"
+            type="com.app.bookshares.home.fragments.SubCategoryFragment" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+
+            <FrameLayout
+                android:id="@+id/frame_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+
+                <include
+                    android:id="@+id/loading"
+                    layout="@layout/loading"
+                    android:visibility="@{presenter.loading ? View.VISIBLE : View.GONE , default = gone}" />
+
+                <com.mlsdev.animatedrv.AnimatedRecyclerView
+                    android:id="@+id/recyclerview_sub_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/space_20"
+                    android:orientation="vertical"
+                    android:requiresFadingEdge="vertical"
+                    app:animationDuration="600"
+                    app:layoutAnimation="@anim/layout_animation_from_bottom_scale"
+                    app:layoutManagerOrientation="vertical"
+                    app:layoutManagerReverse="false"
+                    app:layoutManagerType="linear" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -13,6 +13,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:mk_color="@color/baseColor"
-        app:mk_type="Whirlpool" />
+        app:mk_type="Sharingan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

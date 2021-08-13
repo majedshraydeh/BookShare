@@ -10,7 +10,7 @@ buildscript {
         okhttp_version = "4.9.0"
         urlconnection_version = "4.9.1"
         interceptor_version = "4.9.0"
-        glide_versoin = "4.11.0"
+        glide_versoin = "4.12.0"
     }
 
     repositories {
@@ -20,7 +20,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.3'
-        classpath 'com.google.gms:google-services:4.3.5'
+        classpath 'com.google.gms:google-services:4.3.8'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong

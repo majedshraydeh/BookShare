@@ -1,43 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout  xmlns:android="http://schemas.android.com/apk/res/android"
-   >
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
             name="subCategory"
-            type="com.fikrabd.mehna_w_amal.models.SubCategory" />
+            type="com.app.bookshares.models.SubCategory" />
 
         <variable
             name="presenter"
-            type="com.fikrabd.mehna_w_amal.home.MainPresenter" />
+            type="com.app.bookshares.home.MainPresenter" />
+
     </data>
-<LinearLayout
-
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:background="@color/grey_5"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/spacing_medium">
 
 
+    <LinearLayout
 
-    <TextView
+        android:layout_margin="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/spacing_middle"
-        android:layout_marginRight="@dimen/spacing_middle"
-        android:textSize="16sp"
+        android:orientation="horizontal"
+        android:background="@drawable/card"
         android:gravity="center"
-        android:text="@{subCategory.title}"
-        android:fontFamily="@font/kufi_regular"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/grey_90"
+        android:padding="8dp">
+
+
+
+
+
+            <TextView
+                android:id="@+id/textView111"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/space_5"
+                android:layout_marginEnd="@dimen/space_5"
+                android:fontFamily="@font/kufi_bold"
+                android:text="@{subCategory.name}"
+                android:textColor="@color/baseColor"
+                android:textSize="18sp"
          />
 
+            <ImageView
+                android:id="@+id/imageView71"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/arrow"
+                app:tint="@color/baseColor" />
 
 
-</LinearLayout>
+
+    </LinearLayout>
 
 </layout>

@@ -1,26 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Mehna" parent="Theme.AppCompat.Light.NoActionBar"
-        >
-        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    <style name="Theme.ShareBook" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
         <item name="colorPrimary">@color/baseColor</item>
         <item name="colorPrimaryVariant">@color/baseColor</item>
-        <item name="colorOnPrimary">@color/baseColor</item>
-
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/baseColor</item>
-        <item name="colorSecondaryVariant">@color/grey_5</item>
+        <item name="colorSecondaryVariant">@color/baseColor</item>
         <item name="colorOnSecondary">@color/black</item>
-
+        <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-
-        <item name="cc_tv_background_color">@color/baseColor</item>
-        <item name="cc_is_animate_layout">true</item>
+        <!-- Customize your theme here. -->
     </style>
 
-    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+
+     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@color/white</item>
     </style>
 
@@ -39,17 +34,13 @@
 
     </style>
 
-    <style name="MyToolBar1" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <style name="MyToolBar1" parent="Theme.ShareBook">
         <item name="android:textColor">@color/baseColor</item>
         <item name="android:itemBackground">@color/baseColor</item>
         <item name="colorControlNormal">@color/baseColor</item>
         <item name="android:layout_gravity">center_horizontal|center</item>
         <item name="md_title_gravity">center</item>
     </style>
-<!--    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">-->
-<!--        &lt;!&ndash; Customize color of navigation drawer icon and back arrow &ndash;&gt;-->
-<!--        <item name="colorControlNormal">@color/thirdBaseColor</item>-->
-<!--    </style>-->
 
     <style name="RippleStyleBlack" parent="RippleStyleWhite">
         <item name="mrl_rippleColor">#8096989A</item>
@@ -65,6 +56,10 @@
         <item name="mrl_rippleAlpha">0.2</item>
     </style>
 
+    <style name="NavigationView" >
+        <item name="android:listDivider">@color/baseColor</item>
+    </style>
+
     <style name="NoPrimaryDark" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:windowTranslucentStatus">true</item>
@@ -75,7 +70,7 @@
         <item name="fontFamily">@font/kufi_bold</item>
     </style>
 
-    <style name="Toolbar.Light" parent="@style/Theme.Mehna">
+    <style name="Toolbar.Light" parent="@style/Theme.ShareBook">
         <item name="colorControlNormal">@color/grey_60</item>
         <item name="android:textColorPrimary">@color/grey_60</item>
     </style>

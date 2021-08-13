@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    >
 
     <data>
         <import type="android.view.View" />
@@ -9,11 +9,11 @@
         <import type="android.view.ViewGroup" />
         <variable
             name="presenter"
-            type="com.fikrabd.mehna_w_amal.home.MainPresenter" />
+            type="com.app.bookshares.home.MainPresenter" />
 
         <variable
             name="fragment"
-            type="com.fikrabd.mehna_w_amal.home.fragment.CategoryFragment" />
+            type="com.app.bookshares.home.fragments.CategoryFragment" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -31,24 +31,12 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/space_10"
-                android:layout_marginEnd="@dimen/space_10"
-                android:layout_marginTop="@dimen/space_10"
-                android:gravity="center"
-                android:fontFamily="@font/kufi_bold"
-                android:text="@string/available_sectors"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/space_100"
-                android:layout_marginTop="@dimen/space_20"
-                android:src="@color/com_facebook_primary_button_pressed_text_color"/>
+                android:layout_height="150dp"
+                android:padding="@dimen/space_15"
+                android:src="@drawable/home_hedar"/>
+
 
             <FrameLayout
                 android:id="@+id/frame_content"
@@ -65,7 +53,7 @@
                 <com.mlsdev.animatedrv.AnimatedRecyclerView
                     android:id="@+id/recyclerview_categories"
                     android:layout_width="match_parent"
-                    android:layout_height="450dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:padding="@dimen/space_20"
                     android:orientation="vertical"
